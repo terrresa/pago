@@ -1,0 +1,24 @@
+<h1><?php echo $this->title; ?></h1>
+
+<?php 
+
+$form = $this->form;
+$form->prepare();
+ //echo var_dump($this->basePath());       
+$form->setAttributes(array(
+   //"action" => $this->url('get-form'), 
+   "action" => "", 
+    "method" => "post"
+));
+
+$formLabel = $this->plugin("formLabel");
+echo $this->form()->openTag($form); 
+echo $this->formCollection($form)."<br><br><br><br>";
+echo $this->form()->closeTag();
+
+
+
+
+
+
+

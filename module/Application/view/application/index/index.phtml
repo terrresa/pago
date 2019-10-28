@@ -1,0 +1,134 @@
+
+
+
+<a href="<?= $this->url('prueba')?>">Hola</a><br />
+<div class="container">
+ 
+  <form action="/action_page.php" class="was-validated">
+    <div class="form-group">
+      <label for="uname">id:</label>
+      <input type="text" class="form-control" id="id" placeholder="id" name="uname" required>
+
+    </div>
+    <div class="form-group">
+      <label for="pwd">Marca:</label>
+      <input type="text" class="form-control" id="marca" placeholder="nombre" name="pswd" required>   
+    </div>
+ 
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Marcas</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table  table-striped table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($marcas as $marca) { ?>
+
+                <tr>
+                    <td><?= $marca['id'] ?></td>
+                    <td><?= $marca['nombre'] ?></td>
+                </tr>
+            <?php } ?>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Productos</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table  table-striped table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($productos as $producto) { ?>
+
+                <tr>
+                    <td><?= $producto['id'] ?></td>
+                    <td><?= $producto['nombre'] ?></td>
+                </tr>
+            <?php } ?>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Clientes</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table  table-striped table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($clientes as $cliente) { ?>
+
+                <tr>
+                    <td><?= $cliente['dni'] ?></td>
+                    <td><?= $cliente['nombres'] ?></td>
+                </tr>
+            <?php } ?>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Color</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table  table-striped table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($colores as $color) { ?>
+
+                <tr>
+                    <td><?= $color['id'] ?></td>
+                    <td><?= $color['nombre'] ?></td>
+                </tr>
+            <?php } ?>
+
+            </tbody>
+        </table>
+    </div>
+</div>
